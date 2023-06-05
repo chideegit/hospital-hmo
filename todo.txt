@@ -1,0 +1,10 @@
+Need to make the dashboard dynamic based on the groups 
+
+
+# create group
+my_group = Group.objects.create(name='group1')
+
+# add users to groups 
+from django.contrib.auth.models import Group
+my_group = Group.objects.get(name='my_group_name') 
+my_group.user_set.add(your_user)
